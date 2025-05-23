@@ -1,0 +1,10 @@
+The contents of the file /spring-boot-ecommerce-jpa/product-service/src/main/resources/static should include the static resources for the product service. Here is a basic structure for that directory, which typically includes CSS, JavaScript, and image files. Since you haven't specified any particular files, I will create a placeholder structure.
+
+index.html
+css/
+js/
+images/
+
+The contents of the file will be:
+
+<!-- This file is intentionally left blank. -->

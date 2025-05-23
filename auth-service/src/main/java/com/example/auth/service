@@ -1,0 +1,33 @@
+// filepath: c:\Users\Capaciti\Documents\GitHub\spring-boot-ecommerce-jpa\auth-service\src\main\java\com\example\auth\service\UserService.java
+package com.example.auth.service;
+
+import com.example.auth.entity.User;
+import com.example.auth.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    public User registerUser(User user) {
+        // Logic to register a new user
+        return userRepository.save(user);
+    }
+
+    public Optional<User> findUserById(Long id) {
+        // Logic to find a user by ID
+        return userRepository.findById(id);
+    }
+
+    public Optional<User> findUserByUsername(String username) {
+        // Logic to find a user by username
+        return userRepository.findByUsername(username);
+    }
+
+    // Additional user management methods can be added here
+}

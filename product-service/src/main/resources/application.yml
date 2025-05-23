@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:cockroachdb://cockroachdb:26257/productdb?sslmode=disable
+    driver-class-name: io.cockroachdb.jdbc.Driver
+    username: root
+    password: ""
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: kafka:9092
+server:
+  port: 8082
+opentelemetry:
+  tracing:
+    enabled: true
+    exporter: otlp
+    endpoint: http://otel-collector:4317
